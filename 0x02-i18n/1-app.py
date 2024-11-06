@@ -1,4 +1,4 @@
-#!/usr/binenv python3
+#!/usr/bin/env python3
 """ basic flask app """
 from flask import Flask, render_template
 from flask_babel import Babel
