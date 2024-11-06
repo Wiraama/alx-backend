@@ -25,7 +25,8 @@ def index():
 
 @babel.localeselector
 def get_locale():
-    """ function with the babel.localeselector decorator. Use request.accept_languages """
+    """ function with the babel.localeselector
+    decorator. Use request.accept_languages """
     return request.accept_languages.best_match(app.config['LANGUAGE'])
 
 
