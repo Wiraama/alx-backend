@@ -1,9 +1,11 @@
+#!/usr/binenv python3
 """ basic flask app """
 from flask import Flask, render_template
 from flask_babel import Babel
 
-"""configuration class """
+
 class Config:
+    """ configuration class """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -17,7 +19,9 @@ babel = Babel(app)
 
 @app.route('/')
 def index():
+    """ main method """
     return render_template('1-index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
