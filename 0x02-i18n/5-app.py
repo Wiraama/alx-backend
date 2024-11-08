@@ -27,6 +27,7 @@ users = {
         4: {"name": "Teletubby", "locale": None, "timezone": "Europe/London"}
         }
 
+
 def get_user():
     """ get user from db """
     user_id = request.args.get("login_as")
@@ -34,7 +35,6 @@ def get_user():
     # convertes to digit if string
     if user_id and user_id.isdigit():
         user_id = int(user_id)
-
 
     # lets see is user exist
     if user_id in users:
